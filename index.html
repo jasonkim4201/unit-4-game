@@ -13,11 +13,11 @@
 <title>💎 Crystals Collector 💎</title>
 </head>
 <body class="bg-dark">
-<h1 class="m-2 w-25 jumbotron">Crystals Collector</h1> <!-- ❤️ bootstrap -->
+<h1 class="m-2 w-25 jumbotron">Crystals Collector</h1> 
 <div class="border-bottom border-dark"></div>
 
 
-<div class="container m-0" id = "test">
+<div class="container m-0" id = "test"> <!-- rename that id to something other than test -->
   <h3>Instructions</h3>
   <p class="instructions">You will be given a random number at the start of the game.</p>
   <p class="instructions">There will be four crystals below. By clicking on a crystal you will add a specific amount of points to your total score.</p>
@@ -27,7 +27,10 @@
 </div>
 
 <div class="container m-2 float-left" id = "ranGenNum">
-  <h2>Ran#</h2>
+  <h2 id="ranNum">
+  Goal: 
+  <div id="targetNumber"></div>
+  </h2> <!-- place javascript code to place random number here -->
 </div>
 
 <div class="container m-2 float-left" id = "winLoss">
@@ -43,11 +46,11 @@
 <img class="mysteryGem" id="yellowGem" src="assets/images/yellowgem.jpg" alt = yellowGem>
 </div>
 
-<div class="card m-2 bg-info" style="width: 18rem;">
+<div class="card m-2 bg-info" style="width: 18rem;"> <!-- get a less ugly color later -->
     <div class="card-body">
-      <h5 class="card-title">Your score is:</h5>
+      <h3 class="score-title font-weight-bold">Your score is:</h3>
       <hr>
-      <p class="card-text">0000</p>
+      <h3 class="current-score font-weight-bold">0</h3>
     </div>
   </div>
 
@@ -55,6 +58,7 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.slim.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.13.0/umd/popper.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.3.1.js"></script> <!-- need this for jquery to do things -->
 <script src="assets/javascript/game.js"></script>
 </body>
 </html>
