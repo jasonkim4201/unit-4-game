@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<link rel="stylesheet" href="assets/css/reset.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css">
+<link href="https://fonts.googleapis.com/css?family=Electrolize" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+
+<title>💎 Crystals Collector 💎</title>
+</head>
+<body class="bg-dark">
+<h1 class="m-2 w-25 jumbotron">Crystals Collector</h1> <!-- ❤️ bootstrap -->
+<div class="border-bottom border-dark"></div>
+
+
+<div class="container m-0" id = "test">
+  <h3>Instructions</h3>
+  <p class="instructions">You will be given a random number at the start of the game.</p>
+  <p class="instructions">There will be four crystals below. By clicking on a crystal you will add a specific amount of points to your total score.</p>
+  <p class="instructions">To win you will need to match your total score with the randomly generated number. If you go above the randomly generated number, you lose.</p>
+  <p class="instructions">The value of each crystal of hidden until you click on it.</p>
+  <p class="instructions">Each time the game starts, the game will change the value of each crystal.</p>
+</div>
+
+<div class="container m-2 float-left" id = "ranGenNum">
+  <h2>Ran#</h2>
+</div>
+
+<div class="container m-2 float-left" id = "winLoss">
+ <p> Wins: 0</p>
+ <p>Losses: 0</p>
+</div> <br>
+
+
+<div style="clear:both;">
+<img class="mysteryGem" id="blueGem" src="assets/images/sapphire-gem-clipart-1.jpg" alt="sapphire">
+<img class="mysteryGem" id="redGem" src="assets/images/rubypic.jpg" alt="ruby">
+<img class="mysteryGem" id="greenGem" src="assets/images/green-emerald-stone-transparent-2.png" alt="emerald">
+<img class="mysteryGem" id="yellowGem" src="assets/images/yellowgem.jpg" alt = yellowGem>
+</div>
+
+<div class="card m-2 bg-info" style="width: 18rem;">
+    <div class="card-body">
+      <h5 class="card-title">Your score is:</h5>
+      <hr>
+      <p class="card-text">0000</p>
+    </div>
+  </div>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.13.0/umd/popper.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.min.js"></script>
+<script src="assets/javascript/game.js"></script>
+</body>
+</html>

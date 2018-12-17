@@ -1,0 +1,28 @@
+h1 {
+  font-family: 'Electrolize', sans-serif;
+  font-size: 35px;
+  font-weight: bold;
+  background: url(../images/iceBG.jpg);
+}
+
+body {
+  background: url(../images/purpleBG.png);
+  font-family: 'Electrolize', sans-serif;
+}
+
+.mysteryGem {
+  width: 100px;
+}
+
+#ranGenNum {
+  background: url(../images/diamondBG.jpg);
+  width: 150px;
+  height: 100px;
+}
+
+#winLoss {
+  background: url(../images/iceBG.jpg);
+  width: 150px;
+  height: 100px;
+}
+
