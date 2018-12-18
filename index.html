@@ -27,30 +27,30 @@
 </div>
 
 <div class="container m-2 float-left" id = "ranGenNum">
-  <h2 id="ranNum">
+  <h2 id="ranNum"> <!-- place javascript code to place random number here -->
   Goal: 
   <div id="targetNumber"></div>
-  </h2> <!-- place javascript code to place random number here -->
+  </h2>
 </div>
 
 <div class="container m-2 float-left" id = "winLoss">
- <p> Wins: 0</p>
- <p>Losses: 0</p>
+ <h3 id="winScore"></h3>
+ <h3 id="loseScore"></h3>
 </div> <br>
 
 
 <div style="clear:both;">
 <img class="mysteryGem" id="blueGem" src="assets/images/sapphire-gem-clipart-1.jpg" alt="sapphire">
-<img class="mysteryGem" id="redGem" src="assets/images/rubypic.jpg" alt="ruby">
+<img class="mysteryGem" id="redGem" src="assets/images/redgem.png" alt="ruby">
 <img class="mysteryGem" id="greenGem" src="assets/images/green-emerald-stone-transparent-2.png" alt="emerald">
-<img class="mysteryGem" id="yellowGem" src="assets/images/yellowgem.jpg" alt = yellowGem>
+<img class="mysteryGem" id="yellowGem" src="assets/images/yellowgem1.jpg" alt = yellowGem>
 </div>
 
 <div class="card m-2 bg-info" style="width: 18rem;"> <!-- get a less ugly color later -->
     <div class="card-body">
-      <h3 class="score-title font-weight-bold">Your score is:</h3>
+      <h3 class="score-title font-weight-bold">Current number:</h3>
       <hr>
-      <h3 class="current-score font-weight-bold">0</h3>
+      <h3 class="current-score font-weight-bold" id="playerPoints" ></h3> <!-- PLAYER CURRENT SCORE -->
     </div>
   </div>
 

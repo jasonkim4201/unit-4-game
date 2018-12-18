@@ -19,5 +19,29 @@
 // var randomnumber = Math.floor(Math.random() * (maximum - minimum + 1)) + minimum; 
 var ranTargetNum = Math.floor(Math.random() * (120 - 19 + 1)) + 19;
 console.log(ranTargetNum);
-
 $("#targetNumber").text(ranTargetNum);
+
+// win, lose, and points variables
+var win = 0;
+var lose = 0;
+var currentScore = 0;
+$("#winScore").text("Win: " + win);
+$("#loseScore").text("Lose: " + lose);
+$("#playerPoints").text(currentScore);
+
+var gemValue1 = Math.floor(Math.random() * (12 - 1)) + 1;
+// Make an array from 1-12 to ensure each gem will not have same random number?
+var gemValueRange = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
+console.log(gemValueRange);
+/* var ranGemValue = gemValueRange[Math.floor(Math.random() * gemValueRange.length)]; */
+
+for (var i = 0; i < 4; i++) {
+  var ranGemValue = gemValueRange[Math.floor(Math.random() * gemValueRange.length)];
+  console.log("random gem value:" + ranGemValue); /* THIS METHOD GIVES ME REPEAT VALUES FOR GEMS. Figure it out! */
+}
+
+
+
+
+
+

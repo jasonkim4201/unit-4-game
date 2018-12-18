@@ -2,7 +2,7 @@ h1 {
   font-family: 'Electrolize', sans-serif;
   font-size: 35px;
   font-weight: bold;
-  background: url(../images/iceBG.jpg);
+  background: url(../images/iceBG.jpg); /* I should find something without the logo blaring in my face */
 }
 
 body {
