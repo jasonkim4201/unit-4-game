@@ -37,26 +37,23 @@ var gemValue2 = Math.floor(Math.random() * (12 - 1 + 1)) + 1;
 var gemValue3 = Math.floor(Math.random() * (12 - 1 + 1)) + 1;
 var gemValue4 = Math.floor(Math.random() * (12 - 1 + 1)) + 1;
 
-if (gemValue1 === gemValue2 ||
-    gemValue1 === gemValue3 ||
-    gemValue1 === gemValue4) {
-      var gemValue2 = Math.floor(Math.random() * (12 - 1 + 1)) + 1;
-      var gemValue3 = Math.floor(Math.random() * (12 - 1 + 1)) + 1;
-      var gemValue4 = Math.floor(Math.random() * (12 - 1 + 1)) + 1;
-    }
-if (gemValue2 === gemValue3 ||
-    gemValue2 === gemValue4) {  
-      var gemValue3 = Math.floor(Math.random() * (12 - 1 + 1)) + 1;
-      var gemValue4 = Math.floor(Math.random() * (12 - 1 + 1)) + 1;
-    }
-if (gemValue3 === gemValue4) {
-  var gemValue4 = Math.floor(Math.random() * (12 - 1 + 1)) + 1;
-}
+while (
+  gemValue1 === gemValue2 ||
+  gemValue1 === gemValue3 ||
+  gemValue1 === gemValue4 ||
+  gemValue2 === gemValue3 ||
+  gemValue2 === gemValue4 ||
+  gemValue3 === gemValue4) {
+    var gemValue2 = Math.floor(Math.random() * (12 - 1 + 1)) + 1;
+    var gemValue3 = Math.floor(Math.random() * (12 - 1 + 1)) + 1;
+    var gemValue4 = Math.floor(Math.random() * (12 - 1 + 1)) + 1;
+  }
 console.log("Gem 1 value: " + gemValue1);
 console.log("Gem 2 value: " + gemValue2);
 console.log("Gem 3 value: " + gemValue3);
 console.log("Gem 4 value: " + gemValue4);
 console.log("Reduced the chance of repeating random values. Yes, I'm pretty sure this is a horrible way to go about it.");
+console.log("Learned about while loops and may have patched up the repeating value issue.")
 //Gem pictures
 $("#blueGem").html("<img class='mysteryGem' src='assets/images/0.jpg' alt='sapphire' >");
 $("#redGem").html("<img class='mysteryGem' src='assets/images/1.png' alt='ruby'>");
@@ -77,27 +74,26 @@ function reset() {
   gemValue2 = Math.floor(Math.random() * (12 - 1 + 1)) + 1;
   gemValue3 = Math.floor(Math.random() * (12 - 1 + 1)) + 1;
   gemValue4 = Math.floor(Math.random() * (12 - 1 + 1)) + 1;
+  
   // "attempt" on reducing chance of same value on gems
-if (gemValue1 === gemValue2 ||
+
+while (
+    gemValue1 === gemValue2 ||
     gemValue1 === gemValue3 ||
-    gemValue1 === gemValue4) {
+    gemValue1 === gemValue4 ||
+    gemValue2 === gemValue3 ||
+    gemValue2 === gemValue4 ||
+    gemValue3 === gemValue4) {
       var gemValue2 = Math.floor(Math.random() * (12 - 1 + 1)) + 1;
       var gemValue3 = Math.floor(Math.random() * (12 - 1 + 1)) + 1;
       var gemValue4 = Math.floor(Math.random() * (12 - 1 + 1)) + 1;
     }
-if (gemValue2 === gemValue3 ||
-    gemValue2 === gemValue4) {  
-      var gemValue3 = Math.floor(Math.random() * (12 - 1 + 1)) + 1;
-      var gemValue4 = Math.floor(Math.random() * (12 - 1 + 1)) + 1;
-    }
-if (gemValue3 === gemValue4) {
-  var gemValue4 = Math.floor(Math.random() * (12 - 1 + 1)) + 1;
-}
   console.log("Gem 1 reset value: " + gemValue1);
   console.log("Gem 2 reset value: " + gemValue2);
   console.log("Gem 3 reset value: " + gemValue3);
   console.log("Gem 4 reset value: " + gemValue4);
 } 
+
 
 //if current score = ranTargetNum then win++ and reset || put in fuction so it doesn't go off immediately
 /* if (currentScore === ranTargetNum) {
