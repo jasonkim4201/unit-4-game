@@ -1,24 +1,8 @@
-//add a button to collaspe instructions or hide instuctions to give page room. that or not use a jumbotron for game title...that thing is a bit huge...
-
-// declare all my variables
-
-// have a random number generator ranging between 19-120 as per instructions. DONE
-  //Make ranTargetNum show up on html file. DONE
-
-//This is where I'll add comments about the win/lose score when I have ideas.
-
-// GEMS. Each crystal should have a random hidden value between 1-12
-
-//Once gems are assigned random hidden values, add on click function. if clicked give will give points.
-
-// Total score accumulated from clicking on gems
-
-//On game completeion (win or lose) the game is reset.  
-// crystalValues = [],
+//add a button to collaspe instructions or hide instuctions to give page room if I have the chance.
 
 // var randomnumber = Math.floor(Math.random() * (maximum - minimum + 1)) + minimum; 
 var ranTargetNum = Math.floor(Math.random() * (120 - 19 + 1)) + 19;
-console.log(ranTargetNum);
+console.log("Goal: " + ranTargetNum);
 $("#targetNumber").text(ranTargetNum);
 
 // win, lose, and points variables
@@ -28,14 +12,13 @@ var currentScore = 0;
 $("#winScore").text("Win: " + win);
 $("#loseScore").text("Lose: " + lose);
 $("#playerPoints").text(currentScore);
-
 // Make an array from 1-12 to ensure each gem will not have same random number?
 /* var ranGemValue = gemValueRange[Math.floor(Math.random() * gemValueRange.length)]; */
 // Math.floor(Math.random() * (max - min + 1)) + min; aka Math.floor(Math.random() * (12)) + 1; ?
-var gemValue1 = Math.floor(Math.random() * (12 - 1 + 1)) + 1;
-var gemValue2 = Math.floor(Math.random() * (12 - 1 + 1)) + 1;
-var gemValue3 = Math.floor(Math.random() * (12 - 1 + 1)) + 1;
-var gemValue4 = Math.floor(Math.random() * (12 - 1 + 1)) + 1;
+var gemValue1 = Math.floor(Math.random() * (12)) + 1;
+var gemValue2 = Math.floor(Math.random() * (12)) + 1;
+var gemValue3 = Math.floor(Math.random() * (12)) + 1;
+var gemValue4 = Math.floor(Math.random() * (12)) + 1;
 
 while (
   gemValue1 === gemValue2 ||
@@ -44,40 +27,39 @@ while (
   gemValue2 === gemValue3 ||
   gemValue2 === gemValue4 ||
   gemValue3 === gemValue4) {
-    var gemValue2 = Math.floor(Math.random() * (12 - 1 + 1)) + 1;
-    var gemValue3 = Math.floor(Math.random() * (12 - 1 + 1)) + 1;
-    var gemValue4 = Math.floor(Math.random() * (12 - 1 + 1)) + 1;
+    var gemValue2 = Math.floor(Math.random() * (12)) + 1;
+    var gemValue3 = Math.floor(Math.random() * (12)) + 1;
+    var gemValue4 = Math.floor(Math.random() * (12)) + 1;
   }
 console.log("Gem 1 value: " + gemValue1);
 console.log("Gem 2 value: " + gemValue2);
 console.log("Gem 3 value: " + gemValue3);
 console.log("Gem 4 value: " + gemValue4);
-console.log("Reduced the chance of repeating random values. Yes, I'm pretty sure this is a horrible way to go about it.");
-console.log("Learned about while loops and may have patched up the repeating value issue.")
+console.log("May have patched up the repeating value issue.")
 //Gem pictures
-$("#blueGem").html("<img class='mysteryGem' src='assets/images/0.jpg' alt='sapphire' >");
+$("#blueGem").html("<img class='mysteryGem' src='assets/images/0.jpg' alt='sapphire'>");
 $("#redGem").html("<img class='mysteryGem' src='assets/images/1.png' alt='ruby'>");
 $("#greenGem").html("<img class='mysteryGem' src='assets/images/2.png' alt='emerald'>");
 $("#yellowGem").html("<img class='mysteryGem' src='assets/images/3.jpg' alt='topaz'>")
 
 // RESET FUNCTION
+console.log("Appears to be an issue with red, green, and yellow gems not changing values on reset."); //resolved by removing while loop
+console.log("Random target number aka Goal shows being changed on reset but still acts as if it never changed either"); 
 function reset() {
   //current score return to 0
   currentScore = 0;
   $("#playerPoints").text(currentScore);
   //rerolls target number on reset
   var ranTargetNum = Math.floor(Math.random() * (120 - 19 + 1)) + 19;
-  console.log(ranTargetNum);
+  console.log("On reset new goal is: " + ranTargetNum);
   $("#targetNumber").text(ranTargetNum);
   //rerolls gem values on reset
-  gemValue1 = Math.floor(Math.random() * (12 - 1 + 1)) + 1;
-  gemValue2 = Math.floor(Math.random() * (12 - 1 + 1)) + 1;
-  gemValue3 = Math.floor(Math.random() * (12 - 1 + 1)) + 1;
-  gemValue4 = Math.floor(Math.random() * (12 - 1 + 1)) + 1;
-  
+  gemValue1 = Math.floor(Math.random() * (12)) + 1;
+  gemValue2 = Math.floor(Math.random() * (12)) + 1;
+  gemValue3 = Math.floor(Math.random() * (12)) + 1;
+  gemValue4 = Math.floor(Math.random() * (12)) + 1;
   // "attempt" on reducing chance of same value on gems
-
-while (
+/* while (
     gemValue1 === gemValue2 ||
     gemValue1 === gemValue3 ||
     gemValue1 === gemValue4 ||
@@ -87,28 +69,16 @@ while (
       var gemValue2 = Math.floor(Math.random() * (12 - 1 + 1)) + 1;
       var gemValue3 = Math.floor(Math.random() * (12 - 1 + 1)) + 1;
       var gemValue4 = Math.floor(Math.random() * (12 - 1 + 1)) + 1;
-    }
+    } */
   console.log("Gem 1 reset value: " + gemValue1);
   console.log("Gem 2 reset value: " + gemValue2);
   console.log("Gem 3 reset value: " + gemValue3);
   console.log("Gem 4 reset value: " + gemValue4);
 } 
 
-
-//if current score = ranTargetNum then win++ and reset || put in fuction so it doesn't go off immediately
-/* if (currentScore === ranTargetNum) {
-  win++;
-  reset();
-
-} */
-//if current score > ranTargetNum then lose ++ and reset || put in function so it doesn't go off immdiately
-
-if (currentScore > ranTargetNum) {
-  lose++;
-  reset();
-}
-
 //Gem button click aka $("#COLORgem").onclick function....
+//red green and yellow gems seem to be buggy...
+
 $("#blueGem").on("click", function() {
   currentScore = currentScore + gemValue1;
   $("#playerPoints").text(currentScore);
@@ -116,6 +86,11 @@ $("#blueGem").on("click", function() {
   if (currentScore === ranTargetNum) {
     win++;
     $("#winScore").text("Win: " + win);
+    reset();
+  }
+  if (currentScore > ranTargetNum) {
+    lose++;
+    $("#loseScore").text("Lose: " + lose);
     reset();
   }
 
@@ -130,6 +105,11 @@ $("#redGem").on("click", function() {
     $("#winScore").text("Win: " + win);
     reset();
   }
+  if (currentScore > ranTargetNum) {
+    lose++;
+    $("#loseScore").text("Lose: " + lose);
+    reset();
+  }
 })
 
 $("#greenGem").on("click", function() {
@@ -139,6 +119,11 @@ $("#greenGem").on("click", function() {
   if (currentScore === ranTargetNum) {
     win++;
     $("#winScore").text("Win: " + win);
+    reset();
+  }
+  if (currentScore > ranTargetNum) {
+    lose++;
+    $("#loseScore").text("Lose: " + lose);
     reset();
   }
 })
@@ -152,15 +137,15 @@ $("#yellowGem").on("click", function() {
     $("#winScore").text("Win: " + win);
     reset();
   }
+  if (currentScore > ranTargetNum) {
+    lose++;
+    $("#loseScore").text("Lose: " + lose);
+    reset();
+  }
 })
 
 
 /* imagecrystalsrc = "assets/images/" + i + ".jpg;" */ /* give images numbers to go with loop */ //seems to work only if images are all same file types. if one is png and rest is jpg this method breaks apparently
-
-
-
-
-
 
 /* 
 var gemValueRange = Math.floor(Math.random() * (12 - 1 + 1)) + 1;
@@ -180,16 +165,6 @@ for (var i = 0; i < 4; i++) {
 }
 
  */
-
-/* var gemPic = $("<img>");
-  gemPic.addClass("mysteryGem");
-  gemPic.attr("src", "assets/images/sapphire-gem-clipart-1.jpg");
-  gemPic.attr("src", "assets/images/redgem.png");
-  gemPic.attr("src", "assets/images/green-emerald-stone-transparent-2.png");
-  gemPic.attr("src", "assets/images/yellowgem1.jpg");
-  gemPic.attr("data-crystalvalue", gemValueRange[i]);
-  $("#gems").append(gemPic); */
-
 
 /* var gemValue1 = Math.floor(Math.random() * (12 - 1)) + 1;
 var gemValue2 = Math.floor(Math.random() * (12 - 1)) + 1;
